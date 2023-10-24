@@ -791,6 +791,15 @@ class JointToBone(BaseTransform):
             self.pairs = ((0, 0), (1, 0), (2, 0), (3, 1), (4, 2), (5, 0),
                           (6, 0), (7, 5), (8, 6), (9, 7), (10, 8), (11, 0),
                           (12, 0), (13, 11), (14, 12), (15, 13), (16, 14))
+        
+        elif self.dataset == 'custom_h36m':
+            self.pairs = ( (8, 8),
+                           (3, 2), (2, 1), (1, 0),
+                           (6, 5), (5, 4), (4, 0),
+                           (0, 7), (7, 8),
+                           (10, 9), (9, 8),
+                           (13, 12), (12, 11), (11, 8),
+                           (16, 15), (15, 14), (14, 8))
 
     def transform(self, results: Dict) -> Dict:
         """The transform function of :class:`JointToBone`.

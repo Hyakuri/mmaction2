@@ -170,6 +170,18 @@ class Graph:
                            (12, 6), (9, 7), (7, 5), (10, 8), (8, 6), (5, 0),
                            (6, 0), (1, 0), (3, 1), (2, 0), (4, 2)]
             self.center = 0
+        
+        elif layout == 'custom_h36m':
+            self.num_node = 17
+            #* centripetal connect, pair order need point to [center point]
+            self.inward = [(3, 2), (2, 1), (1, 0),
+                           (6, 5), (5, 4), (4, 0),
+                           (0, 7), (7, 8),
+                           (10, 9), (9, 8),
+                           (13, 12), (12, 11), (11, 8),
+                           (16, 15), (15, 14), (14, 8)]
+            self.center = 8
+        
         elif isinstance(layout, dict):
             self.num_node = layout['num_node']
             self.inward = layout['inward']
