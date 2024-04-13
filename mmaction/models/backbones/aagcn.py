@@ -151,7 +151,7 @@ class AAGCN(BaseModule):
                  in_channels: int = 3,
                  base_channels: int = 64,
                  data_bn_type: str = 'MVC',
-                 num_person: int = 2,
+                 num_person: int = 1,
                  num_stages: int = 10,
                  inflate_stages: List[int] = [5, 8],
                  down_stages: List[int] = [5, 8],
